@@ -2,7 +2,7 @@
   "use strict";
 
   // TODO: reemplazar con el número real de WhatsApp del negocio (formato 52XXXXXXXXXX, sin + ni espacios)
-  var WHATSAPP_NUMBER = "52XXXXXXXXXX";
+  var WHATSAPP_NUMBER = "523141614056";
 
   function buildWhatsAppLink(message) {
     return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
