@@ -1,0 +1,100 @@
+/* ── Contact — DARK PLUM (deepest) ─────────────────────── */
+.contact {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(200, 79, 120, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 80%, rgba(165, 58, 96, 0.12) 0%, transparent 50%),
+    linear-gradient(165deg, var(--plum-800) 0%, var(--plum-900) 60%, #1f0b14 100%);
+  color: var(--cream-50);
+}
+
+.blob {
+  position: absolute;
+  width: 36rem;
+  height: 36rem;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, var(--rose-600) 0%, transparent 60%);
+  opacity: 0.2;
+  filter: blur(64px);
+  pointer-events: none;
+  border-radius: 9999px;
+  animation: contact-pulse 16s ease-in-out infinite;
+}
+
+.blobB {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  bottom: -6rem;
+  right: -4rem;
+  background: radial-gradient(circle, rgba(200, 79, 120, 0.3) 0%, transparent 60%);
+  filter: blur(50px);
+  pointer-events: none;
+  border-radius: 9999px;
+  animation: contact-pulse 20s ease-in-out infinite reverse;
+}
+
+@keyframes contact-pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.2; }
+  50%      { transform: translateX(-50%) scale(1.15); opacity: 0.3; }
+}
+
+.inner {
+  max-width: 36rem;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  background: rgba(255, 251, 248, 0.12);
+  color: var(--cream-50);
+  border: 1px solid rgba(255, 251, 248, 0.1);
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--cream-50);
+}
+
+.sub {
+  font-size: 1.1rem;
+  color: color-mix(in srgb, var(--cream-50) 80%, transparent);
+}
+
+.note {
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--cream-50) 55%, transparent);
+}
+
+.waBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding: 0.9rem 2rem;
+  border-radius: 9999px;
+  background: #25D366;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+}
+
+.waBtn:hover {
+  background: #1ebe5c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+}

@@ -1,0 +1,171 @@
+/* ── Catalog — CLEAN WHITE SECTION ─────────────────────── */
+.catalog {
+  position: relative;
+  overflow: hidden;
+  background: var(--cream-50);
+}
+
+/* Subtle texture using radial gradients */
+.catalog::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 10% 90%, rgba(240, 216, 205, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 10%, rgba(248, 221, 229, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.blobA {
+  position: absolute;
+  width: 30rem;
+  height: 30rem;
+  bottom: -10rem;
+  left: -8rem;
+  background: radial-gradient(circle, var(--peach-200) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  border-radius: 9999px;
+  animation: cat-drift 20s ease-in-out infinite;
+}
+
+@keyframes cat-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(3%, -4%) scale(1.06); }
+}
+
+.sectionHead {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  color: var(--plum-800);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* ── Filter bar ──────────────────── */
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.filterPill {
+  position: relative;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--plum-700);
+  background: var(--cream-100);
+  border: 1.5px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.filterPill.active {
+  color: var(--cream-50);
+  border-color: var(--rose-600);
+}
+
+.pillBg {
+  position: absolute;
+  inset: 0;
+  background: var(--rose-600);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.pillLabel {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Grid ────────────────────────── */
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 640px)  { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ── Pagination ──────────────────── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.pageBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--plum-700);
+  background: var(--cream-100);
+  border: 1.5px solid var(--rose-100);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: var(--rose-100);
+  border-color: var(--rose-300);
+  color: var(--rose-700);
+}
+
+.pageBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pageDot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--plum-700);
+  background: var(--cream-100);
+  border: 1.5px solid transparent;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.pageDot:hover {
+  background: var(--rose-50);
+  border-color: var(--rose-200);
+  transform: scale(1.08);
+}
+
+.pageDotActive {
+  background: var(--rose-600);
+  color: var(--cream-50);
+  border-color: var(--rose-600);
+}
+
+.pageDotActive:hover {
+  background: var(--rose-700);
+  border-color: var(--rose-700);
+  transform: scale(1.08);
+}

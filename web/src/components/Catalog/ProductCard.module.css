@@ -1,0 +1,91 @@
+.card {
+  background: var(--cream-50);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--rose-100);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+}
+
+/* ── Image ───────────────────────── */
+.imgWrap {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--cream-100);
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .img {
+  transform: scale(1.07);
+}
+
+/* ── Overlay ─────────────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(58, 23, 38, 0.55) 0%, transparent 55%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlayBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  background: #25D366;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.overlayBtn:hover {
+  background: #1ebe5c;
+  transform: scale(1.05);
+}
+
+/* ── Info ────────────────────────── */
+.info {
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.brand {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--rose-600);
+}
+
+.name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--plum-800);
+  line-height: 1.3;
+}
+
+.price {
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--plum-700) 70%, transparent);
+  margin-top: 0.2rem;
+}

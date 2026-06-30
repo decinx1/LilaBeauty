@@ -1,0 +1,32 @@
+.wave {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 2;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: clamp(3.5rem, 7vw, 8rem);
+}
+
+/* ── Wave fill (matches NEXT section) ── */
+.cream       path { fill: var(--cream-50); }
+.rose        path { fill: var(--rose-50); }
+.plum        path { fill: var(--plum-700); }
+.peach       path { fill: var(--peach-100); }
+
+/* ── Background (matches PREVIOUS section) ── */
+.bg_transparent { background: transparent; }
+.bg_cream       { background: var(--cream-50); }
+.bg_rose        { background: var(--rose-50); }
+.bg_plum        { background: var(--plum-700); }
+.bg_peach       { background: var(--peach-100); }

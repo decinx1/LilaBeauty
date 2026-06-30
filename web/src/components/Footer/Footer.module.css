@@ -1,0 +1,46 @@
+.footer {
+  border-top: 1px solid var(--rose-100);
+  padding-block: 1.75rem;
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  background: var(--cream-50);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.brand {
+  font-size: 1rem;
+  color: var(--plum-800);
+  font-weight: 500;
+}
+
+.igLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--plum-700);
+  transition: color 0.2s;
+}
+
+.igLink:hover {
+  color: var(--rose-600);
+}
+
+.copy {
+  font-size: 0.78rem;
+  color: color-mix(in srgb, var(--plum-700) 55%, transparent);
+}

@@ -1,0 +1,104 @@
+/* ── WhyUs — DARK PLUM SECTION ────────────────────────── */
+.whyus {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(200, 79, 120, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, rgba(165, 58, 96, 0.12) 0%, transparent 50%),
+    linear-gradient(155deg, var(--plum-700) 0%, var(--plum-900) 100%);
+  color: var(--cream-50);
+}
+
+/* ── Animated background blobs ───── */
+.whyus::before,
+.whyus::after {
+  content: '';
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(56px);
+  pointer-events: none;
+}
+
+.whyus::before {
+  width: 26rem;
+  height: 26rem;
+  top: -8rem;
+  left: -6rem;
+  background: radial-gradient(circle, rgba(200, 79, 120, 0.35) 0%, transparent 65%);
+  animation: whyus-drift 22s ease-in-out infinite;
+}
+
+.whyus::after {
+  width: 22rem;
+  height: 22rem;
+  bottom: -6rem;
+  right: -4rem;
+  background: radial-gradient(circle, rgba(165, 58, 96, 0.25) 0%, transparent 65%);
+  animation: whyus-drift 18s ease-in-out infinite reverse;
+}
+
+@keyframes whyus-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%      { transform: translate(4%, -3%) scale(1.1); }
+  66%      { transform: translate(-3%, 4%) scale(0.95); }
+}
+
+.heading {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  color: var(--cream-50);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 640px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+
+.card {
+  background: rgba(255, 251, 248, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-blob);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
+  border: 1px solid rgba(255, 251, 248, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  background: rgba(255, 251, 248, 0.12);
+}
+
+.icon {
+  color: var(--rose-300);
+  margin-bottom: 0.25rem;
+}
+
+.title {
+  font-weight: 600;
+  color: var(--cream-50);
+  font-size: 0.95rem;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: rgba(255, 251, 248, 0.65);
+  line-height: 1.6;
+}

@@ -1,0 +1,43 @@
+/* ── Design Tokens ─────────────────────────────────────── */
+:root {
+  /* Colors */
+  --cream-50:  #FFFBF8;
+  --cream-100: #FBF3EE;
+  --cream-200: #F6E8DF;
+
+  --rose-50:  #FCF1F4;
+  --rose-100: #F8DDE5;
+  --rose-200: #F1BACE;
+  --rose-300: #E994B2;
+  --rose-400: #DD6F95;
+  --rose-500: #C84F78;
+  --rose-600: #A53A60;
+  --rose-700: #7D2A48;
+  --rose-800: #5C2A3B;
+
+  --peach-100: #F6E9E2;
+  --peach-200: #F0D8CD;
+  --peach-300: #E8BFB0;
+
+  --plum-600: #5C2A3B;
+  --plum-700: #4A1F30;
+  --plum-800: #3A1726;
+  --plum-900: #2A0F1A;
+
+  /* Typography */
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Spacing */
+  --section-px: clamp(1.5rem, 5vw, 4rem);
+  --max-w: 72rem;
+
+  /* Radius */
+  --radius-blob: 2rem;
+  --radius-pill: 9999px;
+  --radius-card: 1.25rem;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(58, 23, 38, 0.08);
+  --shadow-card-hover: 0 12px 40px rgba(58, 23, 38, 0.16);
+}

@@ -1,0 +1,17 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 9999px;
+  will-change: transform, opacity;
+}
+
+.rose  { background: var(--rose-300); }
+.peach { background: var(--peach-300); }
+.plum  { background: var(--rose-400); }
