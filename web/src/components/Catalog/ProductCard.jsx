@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
+import { WA_PHONE_NUMBER } from '../../data/products';
 import styles from './ProductCard.module.css';
 
 export default function ProductCard({ product }) {
   const waText = encodeURIComponent(
     `Hola! Me interesa el ${product.name} ($${product.price}). ¿Está disponible?`
   );
-  const waUrl = `https://wa.me/1?text=${waText}`;
+  const waUrl = `https://wa.me/${WA_PHONE_NUMBER}?text=${waText}`;
 
   return (
     <motion.article

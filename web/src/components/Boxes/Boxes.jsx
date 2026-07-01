@@ -1,5 +1,6 @@
 import { ScrollReveal } from '../ScrollReveal';
 import FloatingParticles from '../FloatingParticles/FloatingParticles';
+import { WA_PHONE_NUMBER } from '../../data/products';
 import styles from './Boxes.module.css';
 
 const BOXES = [
@@ -25,8 +26,6 @@ const BOXES = [
     emoji: '🌿',
   },
 ];
-
-const WA_PHONE = '1'; // ← Replace with real number
 
 export default function Boxes() {
   return (
@@ -56,7 +55,7 @@ export default function Boxes() {
                     <div className={styles.footer}>
                       <span className={styles.price}>{box.price}</span>
                       <a
-                        href={`https://wa.me/${WA_PHONE}?text=${waText}`}
+                        href={`https://wa.me/${WA_PHONE_NUMBER}?text=${waText}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.cta}

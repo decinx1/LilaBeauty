@@ -1,4 +1,5 @@
 // Product catalog — edit names, prices and categories as needed
+export const WA_PHONE_NUMBER = '5213141614056'; // +52 1 314 161 4056
 
 export const CATEGORIES = [
   { id: 'todos',    label: 'Todos' },

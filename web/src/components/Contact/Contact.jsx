@@ -1,8 +1,8 @@
 import { ScrollReveal } from '../ScrollReveal';
 import FloatingParticles from '../FloatingParticles/FloatingParticles';
+import { WA_PHONE_NUMBER } from '../../data/products';
 import styles from './Contact.module.css';
 
-const WA_NUMBER  = '1'; // ← Replace with real number
 const WA_MESSAGE = encodeURIComponent('Hola! Quiero saber más sobre los productos de Lila Beauty 💄');
 
 export default function Contact() {
@@ -27,7 +27,7 @@ export default function Contact() {
 
             <a
               id="contact-wa-btn"
-              href={`https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`}
+              href={`https://wa.me/${WA_PHONE_NUMBER}?text=${WA_MESSAGE}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.waBtn}
