@@ -1,12 +1,16 @@
-/* ── WhyUs — DARK PLUM SECTION ────────────────────────── */
+/* ── WhyUs — VIBRANT EDITORIAL ROSE SECTION ───────────── */
 .whyus {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(200, 79, 120, 0.15) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 80%, rgba(165, 58, 96, 0.12) 0%, transparent 50%),
-    linear-gradient(155deg, var(--plum-700) 0%, var(--plum-900) 100%);
-  color: var(--cream-50);
+  background: linear-gradient(
+    180deg,
+    var(--rose-100, #F8DDE5) 0%,
+    #FCE4EC 35%,
+    var(--peach-200, #F0D8CD) 80%,
+    var(--rose-200, #F1BACE) 100%
+  );
+  color: var(--plum-800, #3A1726);
+  padding-block: clamp(5rem, 10vw, 7.5rem);
 }
 
 /* ── Animated background blobs ───── */
@@ -15,25 +19,26 @@
   content: '';
   position: absolute;
   border-radius: 9999px;
-  filter: blur(56px);
+  filter: blur(64px);
   pointer-events: none;
+  z-index: 0;
 }
 
 .whyus::before {
-  width: 26rem;
-  height: 26rem;
-  top: -8rem;
-  left: -6rem;
-  background: radial-gradient(circle, rgba(200, 79, 120, 0.35) 0%, transparent 65%);
+  width: 32rem;
+  height: 32rem;
+  top: -10rem;
+  left: -8rem;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.75) 0%, transparent 65%);
   animation: whyus-drift 22s ease-in-out infinite;
 }
 
 .whyus::after {
-  width: 22rem;
-  height: 22rem;
-  bottom: -6rem;
-  right: -4rem;
-  background: radial-gradient(circle, rgba(165, 58, 96, 0.25) 0%, transparent 65%);
+  width: 28rem;
+  height: 28rem;
+  bottom: -8rem;
+  right: -6rem;
+  background: radial-gradient(circle, rgba(233, 148, 178, 0.45) 0%, transparent 65%);
   animation: whyus-drift 18s ease-in-out infinite reverse;
 }
 
@@ -44,19 +49,20 @@
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-  color: var(--cream-50);
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  color: var(--plum-900, #2A0F1A);
+  font-weight: 500;
   letter-spacing: -0.02em;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
   position: relative;
   z-index: 1;
 }
 
 .grid {
   display: grid;
-  gap: 1.25rem;
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
   grid-template-columns: 1fr;
   position: relative;
   z-index: 1;
@@ -66,39 +72,58 @@
 @media (min-width: 1024px) { .grid { grid-template-columns: repeat(4, 1fr); } }
 
 .card {
-  background: rgba(255, 251, 248, 0.07);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: var(--radius-blob);
-  padding: 1.75rem 1.5rem;
+  background: #FFFFFF;
+  border-radius: var(--radius-blob, 2rem);
+  padding: clamp(1.75rem, 4vw, 2.25rem) 1.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
-  border: 1px solid rgba(255, 251, 248, 0.1);
+  gap: 0.85rem;
+  box-shadow:
+    0 10px 30px -5px rgba(165, 58, 96, 0.12),
+    0 4px 12px -2px rgba(165, 58, 96, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-  transform: translateY(-4px);
-  background: rgba(255, 251, 248, 0.12);
+  box-shadow:
+    0 20px 42px -6px rgba(165, 58, 96, 0.22),
+    0 8px 20px -4px rgba(165, 58, 96, 0.12);
+  transform: translateY(-6px) scale(1.02);
+  border-color: #FFFFFF;
 }
 
 .icon {
-  color: var(--rose-300);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--rose-50, #FCF1F4);
+  color: var(--rose-600, #D92662);
   margin-bottom: 0.25rem;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.1) rotate(6deg);
+  background: #FEE2E9;
+  color: #C62254;
 }
 
 .title {
+  font-family: var(--font-sans);
   font-weight: 600;
-  color: var(--cream-50);
-  font-size: 0.95rem;
+  color: var(--plum-900, #2A0F1A);
+  font-size: 1.05rem;
 }
 
 .desc {
-  font-size: 0.85rem;
-  color: rgba(255, 251, 248, 0.65);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--plum-800, #3A1726) 75%, transparent);
   line-height: 1.6;
 }

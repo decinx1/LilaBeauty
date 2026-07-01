@@ -23,10 +23,14 @@
 .rose        path { fill: var(--rose-50); }
 .plum        path { fill: var(--plum-700); }
 .peach       path { fill: var(--peach-100); }
+.whyus_top   path { fill: var(--rose-100); }
+.whyus_bot   path { fill: var(--rose-200); }
 
 /* ── Background (matches PREVIOUS section) ── */
-.bg_transparent { background: transparent; }
-.bg_cream       { background: var(--cream-50); }
-.bg_rose        { background: var(--rose-50); }
-.bg_plum        { background: var(--plum-700); }
-.bg_peach       { background: var(--peach-100); }
+.bg_transparent  { background: transparent; }
+.bg_cream        { background: var(--cream-50); }
+.bg_rose         { background: var(--rose-50); }
+.bg_plum         { background: var(--plum-700); }
+.bg_peach        { background: var(--peach-100); }
+.bg_whyus_top    { background: var(--rose-100); }
+.bg_whyus_bot    { background: var(--rose-200); }

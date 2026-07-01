@@ -10,7 +10,7 @@ export default function Contact() {
     <section id="contacto" className={`section ${styles.contact}`}>
       <div className={styles.blob} />
       <div className={styles.blobB} />
-      <FloatingParticles count={12} color="plum" />
+      <FloatingParticles count={12} color="rose" />
       <div className="container">
         <ScrollReveal>
           <div className={styles.inner}>

@@ -1,12 +1,16 @@
-/* ── Contact — DARK PLUM (deepest) ─────────────────────── */
+/* ── Contact — VIBRANT EDITORIAL ROSE / PEACH ──────────── */
 .contact {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(200, 79, 120, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at 20% 80%, rgba(165, 58, 96, 0.12) 0%, transparent 50%),
-    linear-gradient(165deg, var(--plum-800) 0%, var(--plum-900) 60%, #1f0b14 100%);
-  color: var(--cream-50);
+  background: linear-gradient(
+    180deg,
+    var(--rose-100, #F8DDE5) 0%,
+    #FCE4EC 40%,
+    var(--peach-200, #F0D8CD) 80%,
+    var(--cream-50, #FFFBF8) 100%
+  );
+  color: var(--plum-800, #3A1726);
+  padding-block: clamp(5rem, 10vw, 7.5rem);
 }
 
 .blob {
@@ -16,85 +20,96 @@
   top: -10rem;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(circle, var(--rose-600) 0%, transparent 60%);
-  opacity: 0.2;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 65%);
   filter: blur(64px);
   pointer-events: none;
   border-radius: 9999px;
   animation: contact-pulse 16s ease-in-out infinite;
+  z-index: 0;
 }
 
 .blobB {
   position: absolute;
-  width: 20rem;
-  height: 20rem;
+  width: 24rem;
+  height: 24rem;
   bottom: -6rem;
   right: -4rem;
-  background: radial-gradient(circle, rgba(200, 79, 120, 0.3) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(233, 148, 178, 0.45) 0%, transparent 65%);
   filter: blur(50px);
   pointer-events: none;
   border-radius: 9999px;
   animation: contact-pulse 20s ease-in-out infinite reverse;
+  z-index: 0;
 }
 
 @keyframes contact-pulse {
-  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.2; }
-  50%      { transform: translateX(-50%) scale(1.15); opacity: 0.3; }
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+  50%      { transform: translateX(-50%) scale(1.15); opacity: 0.85; }
 }
 
 .inner {
-  max-width: 36rem;
+  max-width: 42rem;
   margin-inline: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1.25rem;
   position: relative;
   z-index: 1;
 }
 
 .badge {
-  background: rgba(255, 251, 248, 0.12);
-  color: var(--cream-50);
-  border: 1px solid rgba(255, 251, 248, 0.1);
+  background: var(--rose-50, #FCF1F4);
+  color: var(--rose-600, #D92662);
+  border: 1px solid rgba(217, 38, 98, 0.15);
+  font-weight: 600;
+  padding: 0.4rem 1rem;
 }
 
 .heading {
-  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  font-weight: 500;
   letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--cream-50);
+  line-height: 1.15;
+  color: var(--plum-900, #2A0F1A);
 }
 
 .sub {
+  font-family: var(--font-sans);
   font-size: 1.1rem;
-  color: color-mix(in srgb, var(--cream-50) 80%, transparent);
+  color: color-mix(in srgb, var(--plum-800, #3A1726) 85%, transparent);
+  max-width: 30rem;
 }
 
 .note {
-  font-size: 0.875rem;
-  color: color-mix(in srgb, var(--cream-50) 55%, transparent);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--plum-800, #3A1726) 65%, transparent);
+  max-width: 32rem;
+  line-height: 1.5;
 }
 
 .waBtn {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  margin-top: 0.75rem;
-  padding: 0.9rem 2rem;
+  margin-top: 0.5rem;
+  padding: 1rem 2.25rem;
   border-radius: 9999px;
-  background: #25D366;
+  background: #0E7435;
   color: #fff;
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
   font-weight: 700;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 8px 24px -4px rgba(14, 116, 53, 0.35);
+  text-decoration: none;
 }
 
 .waBtn:hover {
-  background: #1ebe5c;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.4);
+  background: #0A5C2A;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 14px 32px -4px rgba(14, 116, 53, 0.45);
 }

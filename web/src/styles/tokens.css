@@ -25,7 +25,7 @@
   --plum-900: #2A0F1A;
 
   /* Typography */
-  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-display: 'Fraunces', 'Playfair Display', ui-serif, Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
 
   /* Spacing */

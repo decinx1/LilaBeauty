@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
 
 const NAV_LINKS = [
+  { href: '#inicio',    label: 'Inicio' },
   { href: '#nosotros',  label: 'Nosotros' },
   { href: '#catalogo',  label: 'Catálogo' },
   { href: '#cajas',     label: 'Cajas' },
@@ -30,7 +31,9 @@ export default function Header() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <div className={styles.inner}>
-        <a href="#inicio" className={styles.logo}>Lila Beauty</a>
+        <a href="#inicio" className={styles.logo} aria-label="Lila Beauty Inicio">
+          <img src="/images/logo.jpg" alt="Lila Beauty" className={styles.logoImg} />
+        </a>
 
         <nav className={styles.nav} aria-label="Navegación principal">
           {NAV_LINKS.map((link) => (
@@ -78,3 +81,4 @@ export default function Header() {
     </motion.header>
   );
 }
+

@@ -6,17 +6,18 @@
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background: #25D366;
+  background: #0E7435;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-  transition: box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(14, 116, 53, 0.45);
+  transition: box-shadow 0.2s, background 0.2s;
 }
 
 .fab:hover {
-  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.55);
+  background: #0A5C2A;
+  box-shadow: 0 8px 32px rgba(14, 116, 53, 0.55);
 }
 
 /* ── Pulse animation ─────────────── */
@@ -24,7 +25,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: #25D366;
+  background: #0E7435;
   animation: pulse 2.5s ease-out infinite;
 }
 

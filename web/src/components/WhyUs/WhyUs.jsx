@@ -52,7 +52,7 @@ const FEATURES = [
 export default function WhyUs() {
   return (
     <section className={`section ${styles.whyus}`}>
-      <FloatingParticles count={14} color="plum" />
+      <FloatingParticles count={14} color="rose" />
 
       <div className="container">
         <ScrollReveal>

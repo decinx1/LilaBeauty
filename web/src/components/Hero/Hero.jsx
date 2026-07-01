@@ -1,75 +1,76 @@
 import { motion } from 'framer-motion';
-import { HERO_IMAGES } from '../../data/products';
 import FloatingParticles from '../FloatingParticles/FloatingParticles';
 import styles from './Hero.module.css';
 
 const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+  },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 28 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 };
-
-const imgVariant = (delay) => ({
-  hidden: { opacity: 0, scale: 0.92 },
-  show:   { opacity: 1, scale: 1, transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] } },
-});
 
 export default function Hero() {
   return (
     <section id="inicio" className={styles.hero}>
-      {/* Blobs */}
+      {/* Blobs & Particles */}
       <div className={styles.blobA} />
       <div className={styles.blobB} />
       <div className={styles.blobC} />
       <FloatingParticles count={16} color="rose" />
 
-      <div className={`container ${styles.grid}`}>
-        {/* Text */}
+      <div className={styles.container}>
         <motion.div
-          className={styles.text}
+          className={styles.content}
           variants={container}
           initial="hidden"
           animate="show"
         >
-          <motion.span variants={item} className={`pill pill-badge ${styles.badge}`}>
-            ✨ Nuevo · Cajas armadas a tu gusto
-          </motion.span>
+          {/* Logo Icon Box */}
+          <motion.div variants={item} className={styles.logoBoxWrapper}>
+            <div className={styles.logoBox}>
+              <img src="/images/logo.jpg" alt="Lila Beauty" />
+            </div>
+          </motion.div>
 
-          <motion.h1 variants={item} className={`font-display ${styles.heading}`}>
+          {/* Heading */}
+          <motion.h1 variants={item} className={styles.heading}>
             Belleza que se siente{' '}
-            <span className={styles.accent}>tuya</span>
+            <span className={styles.highlight}>tuya</span>
           </motion.h1>
 
+          {/* Subtitle */}
           <motion.p variants={item} className={styles.sub}>
-            Lip oils, labiales y skincare que aman tu piel.
-            Todo lo que vendemos, en un solo lugar — sin tener que preguntar.
+            Productos de belleza originales, curados con cariño y<br className={styles.break} />
+            listos para ti.
           </motion.p>
 
-          <motion.div variants={item} className={styles.cta}>
-            <a href="#catalogo" className="btn-primary">Ver catálogo</a>
-            <a href="#cajas" className="btn-secondary">Cajas armadas</a>
+          {/* CTA Button */}
+          <motion.div variants={item} className={styles.ctaWrapper}>
+            <a href="#catalogo" className={styles.ctaButton}>
+              <span>Ver Catálogo</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={styles.ctaIcon}>
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </a>
           </motion.div>
         </motion.div>
 
-        {/* Product grid mosaic */}
-        <div className={styles.mosaic}>
-          {HERO_IMAGES.map((src, i) => (
-            <motion.div
-              key={src}
-              className={styles.mosaicItem}
-              variants={imgVariant(0.3 + i * 0.1)}
-              initial="hidden"
-              animate="show"
-              whileHover={{ scale: 1.04, transition: { duration: 0.3 } }}
-            >
-              <img src={src} alt="Producto Lila Beauty" loading="eager" />
-            </motion.div>
-          ))}
-        </div>
+        {/* Scroll Indicator */}
+        <motion.div
+          className={styles.scrollIndicator}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.8 }}
+        >
+          <span className={styles.scrollText}>SCROLL</span>
+          <div className={styles.scrollLine} />
+        </motion.div>
       </div>
     </section>
   );

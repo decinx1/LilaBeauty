@@ -19,23 +19,23 @@ export default function App() {
         <Hero />
         <WaveDivider fill="rose" bg="peach" />
 
-        {/* About (rose gradient) → WhyUs (DARK plum) */}
+        {/* About (rose gradient) → WhyUs (vibrant rose) */}
         <About />
-        <WaveDivider fill="plum" bg="rose" />
+        <WaveDivider fill="whyus_top" bg="rose" />
 
-        {/* WhyUs (dark plum) → Catalog (clean white) */}
+        {/* WhyUs (vibrant rose) → Catalog (clean cream) */}
         <WhyUs />
-        <WaveDivider fill="cream" bg="plum" />
+        <WaveDivider fill="cream" bg="whyus_bot" />
 
         {/* Catalog (cream) → Boxes (warm peach) */}
         <Catalog />
         <WaveDivider fill="peach" bg="cream" />
 
-        {/* Boxes (peach) → Contact (dark plum) */}
+        {/* Boxes (peach) → Contact (vibrant rose) */}
         <Boxes />
-        <WaveDivider fill="plum" bg="peach" />
+        <WaveDivider fill="whyus_top" bg="peach" />
 
-        {/* Contact (dark plum) */}
+        {/* Contact (vibrant rose → cream) */}
         <Contact />
       </main>
       <Footer />

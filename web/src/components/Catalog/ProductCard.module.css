@@ -49,15 +49,16 @@
   gap: 0.4rem;
   padding: 0.5rem 1.1rem;
   border-radius: 9999px;
-  background: #25D366;
+  background: #0E7435;
   color: #fff;
   font-size: 0.8rem;
   font-weight: 600;
   transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(14, 116, 53, 0.35);
 }
 
 .overlayBtn:hover {
-  background: #1ebe5c;
+  background: #0A5C2A;
   transform: scale(1.05);
 }
 

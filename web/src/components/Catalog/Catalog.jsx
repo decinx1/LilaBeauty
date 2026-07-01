@@ -46,13 +46,6 @@ export default function Catalog() {
                 onClick={() => handleFilter(cat.id)}
                 aria-pressed={active === cat.id}
               >
-                {active === cat.id && (
-                  <motion.span
-                    layoutId="pill-bg"
-                    className={styles.pillBg}
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
                 <span className={styles.pillLabel}>{cat.label}</span>
               </button>
             ))}
