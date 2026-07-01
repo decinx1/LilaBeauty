@@ -2,7 +2,7 @@ import { ScrollReveal } from '../ScrollReveal';
 import FloatingParticles from '../FloatingParticles/FloatingParticles';
 import styles from './About.module.css';
 
-const PILLS = ['Productos originales', 'Curaduría con cariño', 'Respuesta rápida'];
+const PILLS = ['Productos originales', 'Hecho con amor', 'Respuesta rápida'];
 
 export default function About() {
   return (

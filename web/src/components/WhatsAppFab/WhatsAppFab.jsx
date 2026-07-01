@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { WA_PHONE_NUMBER } from '../../data/products';
 import styles from './WhatsAppFab.module.css';
 
-const WA_MESSAGE = encodeURIComponent('Hola! Tengo una pregunta sobre Lila Beauty');
+const WA_MESSAGE = encodeURIComponent('¡Hola! Tengo una pregunta sobre Lila Beauty');
 
 export default function WhatsAppFab() {
   return (
@@ -11,7 +11,7 @@ export default function WhatsAppFab() {
       href={`https://wa.me/${WA_PHONE_NUMBER}?text=${WA_MESSAGE}`}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Escribir por WhatsApp"
+      aria-label="Escríbenos por WhatsApp"
       className={styles.fab}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}

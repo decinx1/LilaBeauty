@@ -48,7 +48,8 @@ export default function Hero() {
 
           {/* Subtitle */}
           <motion.p variants={item} className={styles.sub}>
-            Productos de belleza originales , seleccionados con cariño y<br className={styles.break} />
+            Productos de belleza originales, seleccionados con cariño y{' '}
+            <br className={styles.break} />
             listos para ti.
           </motion.p>
 

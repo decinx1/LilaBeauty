@@ -4,7 +4,7 @@ import styles from './ProductCard.module.css';
 
 export default function ProductCard({ product }) {
   const waText = encodeURIComponent(
-    `Hola! Me interesa el ${product.name} ($${product.price}). ¿Está disponible?`
+    `¡Hola! Me interesa el producto ${product.name} ($${product.price}). ¿Está disponible?`
   );
   const waUrl = `https://wa.me/${WA_PHONE_NUMBER}?text=${waText}`;
 

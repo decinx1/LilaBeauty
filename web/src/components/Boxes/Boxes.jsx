@@ -47,7 +47,7 @@ export default function Boxes() {
 
         <div className={styles.grid}>
           {BOXES.map((box, i) => {
-            const waText = encodeURIComponent(`Hola! Me interesa la ${box.name} (${box.price}). ¿Está disponible?`);
+            const waText = encodeURIComponent(`¡Hola! Me interesa la ${box.name} (${box.price}). ¿Está disponible?`);
             return (
               <ScrollReveal key={box.id} delay={i * 0.1}>
                 <article className={styles.card}>

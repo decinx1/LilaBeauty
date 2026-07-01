@@ -39,7 +39,7 @@ export const PRODUCTS = [
   { id: 13, name: 'e.l.f. Skin Bronzing Drops',     brand: 'e.l.f. Skin', price: '$15.00', category: 'skincare', image: '/images/img-13.jpg' },
   { id: 18, name: 'e.l.f. Mascara Purple Chrome',   brand: 'e.l.f.',      price: '$10.00', category: 'skincare', image: '/images/img-18.jpg' },
   { id: 19, name: 'e.l.f. Squeeze Lip Balm Butter', brand: 'e.l.f.',      price: '$7.00',  category: 'skincare', image: '/images/img-19.jpg' },
-  { id: 20, name: 'e.l.f. Glow Beviver Lip Balm',   brand: 'e.l.f.',      price: '$8.00',  category: 'skincare', image: '/images/img-20.jpg' },
+  { id: 20, name: 'e.l.f. Glow Reviver Lip Balm',   brand: 'e.l.f.',      price: '$8.00',  category: 'skincare', image: '/images/img-20.jpg' },
   { id: 22, name: 'Pixi On-the-Glow Superglow',     brand: 'Pixi',        price: '$16.00', category: 'skincare', image: '/images/img-22.jpg' },
   { id: 23, name: 'Maybelline Cloudtopia Mousse',   brand: 'Maybelline',  price: '$13.00', category: 'skincare', image: '/images/img-23.jpg' },
   { id: 25, name: 'e.l.f. Halo Glow Skin Tint SPF50',brand: 'e.l.f.',    price: '$15.00', category: 'skincare', image: '/images/img-25.jpg' },
