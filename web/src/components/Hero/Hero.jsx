@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
+import { HERO_IMAGES } from '../../data/products';
 import FloatingParticles from '../FloatingParticles/FloatingParticles';
+import HeroProductFan from './HeroProductFan';
 import styles from './Hero.module.css';
 
 const container = {
@@ -59,6 +61,9 @@ export default function Hero() {
               </svg>
             </a>
           </motion.div>
+
+          {/* Product Arch Showcase (Fan Layout) */}
+          <HeroProductFan images={HERO_IMAGES} />
         </motion.div>
 
         {/* Scroll Indicator */}

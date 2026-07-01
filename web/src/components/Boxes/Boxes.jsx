@@ -7,23 +7,23 @@ const BOXES = [
   {
     id: 'glow',
     name: 'Caja Glow',
-    desc: 'Lip oil + labial rojo + parches hidrocoloides',
+    desc: 'e.l.f. Lip Oil Coral + Satin Lipstick Red + Halo Glow Blush Wand',
     price: '$25.00',
-    emoji: '✨',
+    images: ['/images/img-01.jpg', '/images/img-08.jpg', '/images/img-07.jpg'],
   },
   {
     id: 'date-night',
     name: 'Caja Date Night',
-    desc: '2 labiales + lip oil + brillo de labios',
+    desc: 'e.l.f. Satin Lipstick + Maybelline Vinyl Ink + Lip Oil + NYX Jelly Gloss',
     price: '$30.00',
-    emoji: '💋',
+    images: ['/images/img-06.jpg', '/images/img-24.jpg', '/images/img-05.jpg', '/images/img-31.jpg'],
   },
   {
     id: 'skincare',
     name: 'Caja Skincare',
-    desc: 'Limpiador facial + halo glow + parches',
+    desc: 'Star Wash Salicylic Cleanser + e.l.f. Halo Glow Skin Tint + Bronzing Drops',
     price: '$28.00',
-    emoji: '🌿',
+    images: ['/images/img-03.jpg', '/images/img-25.jpg', '/images/img-13.jpg'],
   },
 ];
 
@@ -48,7 +48,13 @@ export default function Boxes() {
             return (
               <ScrollReveal key={box.id} delay={i * 0.1}>
                 <article className={styles.card}>
-                  <div className={styles.emoji}>{box.emoji}</div>
+                  <div className={`${styles.imageWrap} ${styles[`grid_${box.images?.length || 1}`]}`}>
+                    {box.images?.map((imgUrl, idx) => (
+                      <div key={imgUrl} className={styles.gridItem}>
+                        <img src={imgUrl} alt={`${box.name} ítem ${idx + 1}`} className={styles.img} loading="lazy" />
+                      </div>
+                    ))}
+                  </div>
                   <div className={styles.info}>
                     <h3 className={`font-display ${styles.name}`}>{box.name}</h3>
                     <p className={styles.desc}>{box.desc}</p>
