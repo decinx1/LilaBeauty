@@ -23,6 +23,18 @@ export default function Header() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    closeMenu();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+    }
+  };
+
   return (
     <motion.header
       className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}
@@ -31,13 +43,23 @@ export default function Header() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <div className={styles.inner}>
-        <a href="#inicio" className={styles.logo} aria-label="Lila Beauty Inicio">
+        <a
+          href="#inicio"
+          className={styles.logo}
+          aria-label="Lila Beauty Inicio"
+          onClick={(e) => handleNavClick(e, '#inicio')}
+        >
           <img src="/images/logo.jpg" alt="Lila Beauty" className={styles.logoImg} />
         </a>
 
         <nav className={styles.nav} aria-label="Navegación principal">
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className={styles.navLink}>
+            <a
+              key={link.href}
+              href={link.href}
+              className={styles.navLink}
+              onClick={(e) => handleNavClick(e, link.href)}
+            >
               {link.label}
             </a>
           ))}
@@ -70,7 +92,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={styles.mobileLink}
-                onClick={closeMenu}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
               </a>

@@ -175,13 +175,14 @@
 .miniCard:nth-child(2) { transform: rotate(-1deg) translateY(-2px); }
 .miniCard:nth-child(3) { transform: rotate(7deg) translateY(2px); }
 .miniCard:nth-child(4) { transform: rotate(14deg) translateY(6px); }
+.miniCard:nth-child(5) { transform: rotate(18deg) translateY(10px); }
 
 .miniCard:hover {
   transform: rotate(0deg) scale(1.35) translateY(-14px) !important;
   box-shadow:
     0 20px 36px -4px rgba(220, 70, 120, 0.5),
     0 0 0 2px #D92662;
-  z-index: 50 !important;
+  z-index: 30 !important;
 }
 
 .miniImg {
@@ -264,4 +265,46 @@
 .cta:hover {
   background: var(--rose-700);
   transform: scale(1.05);
+}
+
+/* ── Responsive Mobile Adjustments ──────────────────── */
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem 1.15rem;
+    gap: 1rem;
+  }
+
+  .cardHeader {
+    min-height: 80px;
+    margin-bottom: 0.5rem;
+    align-items: center;
+  }
+
+  .emoji {
+    font-size: 2.25rem;
+  }
+
+  .productsComposition {
+    padding-right: 0;
+    margin-top: 0;
+  }
+
+  .miniCard {
+    width: 48px;
+    height: 70px;
+    border-radius: 9px;
+    margin-left: -18px;
+  }
+
+  .miniCard:hover {
+    transform: rotate(0deg) scale(1.25) translateY(-8px) !important;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
 }
