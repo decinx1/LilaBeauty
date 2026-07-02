@@ -5,28 +5,40 @@ import styles from './Boxes.module.css';
 
 const BOXES = [
   {
-    id: 'glow',
-    name: 'Caja Glow',
-    desc: 'e.l.f. Lip Oil Coral + Satin Lipstick Red + Halo Glow Blush Wand',
-    price: '$25.00',
+    id: '10-piezas',
+    name: 'Caja de 10 piezas',
+    desc: 'Mix surtido sin piezas repetidas. Combina variedad de labiales, lip oils y skincare de marcas originales, ideal para emprender o compartir.',
+    price: '$130',
+    unit: 'c/u',
+    totalPrice: '$1,300 total',
+    badge: 'Para empezar',
+    isPopular: false,
+    emoji: '📦',
+    images: ['/images/img-01.jpg', '/images/img-08.jpg', '/images/img-07.jpg', '/images/img-15.jpg'],
+  },
+  {
+    id: '20-piezas',
+    name: 'Caja de 20 piezas',
+    desc: 'Lote surtido multimarca con amplia variedad de tonos y fórmulas (sin repetir). Excelente margen de ganancia para surtir tu negocio.',
+    price: '$120',
+    unit: 'c/u',
+    totalPrice: '$2,400 total',
+    badge: 'Más pedido',
+    isPopular: true,
     emoji: '✨',
-    images: ['/images/img-01.jpg', '/images/img-08.jpg', '/images/img-07.jpg'],
+    images: ['/images/img-06.jpg', '/images/img-24.jpg', '/images/img-05.jpg', '/images/img-31.jpg', '/images/img-03.jpg'],
   },
   {
-    id: 'date-night',
-    name: 'Caja Date Night',
-    desc: 'e.l.f. Satin Lipstick + Maybelline Vinyl Ink + Lip Oil + NYX Jelly Gloss',
-    price: '$30.00',
-    emoji: '💋',
-    images: ['/images/img-06.jpg', '/images/img-24.jpg', '/images/img-05.jpg', '/images/img-31.jpg'],
-  },
-  {
-    id: 'skincare',
-    name: 'Caja Skincare',
-    desc: 'Star Wash Salicylic Cleanser + e.l.f. Halo Glow Skin Tint + Bronzing Drops',
-    price: '$28.00',
-    emoji: '🌿',
-    images: ['/images/img-03.jpg', '/images/img-25.jpg', '/images/img-13.jpg'],
+    id: '50-piezas',
+    name: 'Caja de 50 piezas o más',
+    desc: 'El máximo ahorro para mayoristas. Surtido variado premium con la mejor selección de categorías y tonos sin saturar, más trato VIP.',
+    price: '$110',
+    unit: 'c/u',
+    totalPrice: 'Desde $5,500 total',
+    badge: 'Mayor ahorro',
+    isPopular: false,
+    emoji: '👑',
+    images: ['/images/img-02.jpg', '/images/img-22.jpg', '/images/img-13.jpg', '/images/img-10.jpg', '/images/img-21.jpg'],
   },
 ];
 
@@ -38,19 +50,19 @@ export default function Boxes() {
       <div className="container">
         <ScrollReveal>
           <div className={styles.sectionHead}>
-            <h2 className={`font-display ${styles.heading}`}>Armadas con cariño</h2>
+            <h2 className={`font-display ${styles.heading}`}>Cajas y Lotes por Piezas</h2>
             <p className={styles.sub}>
-              Combos listos para regalar — o para regalarte.
+              Armadas con cariño — lotes surtidos con variedad de productos y tonos (no son piezas repetidas).
             </p>
           </div>
         </ScrollReveal>
 
         <div className={styles.grid}>
           {BOXES.map((box, i) => {
-            const waText = encodeURIComponent(`¡Hola! Me interesa la ${box.name} (${box.price}). ¿Está disponible?`);
+            const waText = encodeURIComponent(`¡Hola! Me interesa la ${box.name} (${box.price} ${box.unit} - ${box.totalPrice}). Sé que viene surtida sin repetir, ¿qué marcas o tonos tienes disponibles?`);
             return (
               <ScrollReveal key={box.id} delay={i * 0.1}>
-                <article className={styles.card}>
+                <article className={`${styles.card} ${box.isPopular ? styles.popularCard : ''}`}>
                   <div className={styles.cardHeader}>
                     <div className={styles.emoji}>{box.emoji}</div>
                     <div className={styles.productsComposition}>
@@ -62,10 +74,21 @@ export default function Boxes() {
                     </div>
                   </div>
                   <div className={styles.info}>
+                    {box.badge && (
+                      <span className={`${styles.badge} ${box.isPopular ? styles.popularBadge : ''}`}>
+                        {box.badge}
+                      </span>
+                    )}
                     <h3 className={`font-display ${styles.name}`}>{box.name}</h3>
                     <p className={styles.desc}>{box.desc}</p>
                     <div className={styles.footer}>
-                      <span className={styles.price}>{box.price}</span>
+                      <div className={styles.priceContainer}>
+                        <div className={styles.price}>
+                          <span>{box.price}</span>
+                          <span className={styles.unit}>{box.unit}</span>
+                        </div>
+                        <span className={styles.totalPrice}>{box.totalPrice}</span>
+                      </div>
                       <a
                         href={`https://wa.me/${WA_PHONE_NUMBER}?text=${waText}`}
                         target="_blank"

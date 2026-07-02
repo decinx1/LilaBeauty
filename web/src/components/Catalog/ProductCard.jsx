@@ -19,6 +19,9 @@ export default function ProductCard({ product }) {
       whileHover={{ y: -6, transition: { duration: 0.25 } }}
     >
       <div className={styles.imgWrap}>
+        {product.badge && (
+          <span className={styles.badge}>{product.badge}</span>
+        )}
         <img
           src={product.image}
           alt={product.name}
