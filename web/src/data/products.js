@@ -15,12 +15,12 @@ export const PRODUCTS = [
   { id: 5, name: 'e.l.f. Lip Oil Papayarazzi', brand: 'e.l.f.', price: '$195', category: 'lip-oil', image: '/images/img-05.jpg' },
   { id: 9, name: 'e.l.f. Lip Oil Honey Talks', brand: 'e.l.f.', price: '$195', category: 'lip-oil', image: '/images/img-09.jpg' },
   { id: 14, name: 'e.l.f. Lip Oil Super Neutral', brand: 'e.l.f.', price: '$195', category: 'lip-oil', image: '/images/img-14.jpg' },
-  { id: 12, name: 'e.l.f. Lip Oil Crystal Clear', brand: 'e.l.f.', price: '$200', category: 'lip-oil', image: '/images/img-12.jpg', badge: '2 disponibles' },
+  { id: 12, name: 'e.l.f. Lip Oil Crystal Clear', brand: 'e.l.f.', price: '$200', category: 'lip-oil', image: '/images/img-12.jpg' },
   { id: 15, name: 'e.l.f. Skin Bronzing Drops Pure Gold', brand: 'e.l.f. Skin', price: '$200', category: 'skincare', image: '/images/img-15.jpg' },
   { id: 4, name: 'NYX Fat Oil Lip Drip FOLD05', brand: 'NYX', price: '$185', category: 'lip-oil', image: '/images/img-04.jpg' },
 
   // ── LABIALES ──────────────────────────────────────────────────────────────
-  { id: 6, name: 'e.l.f. Satin Lipstick Pink Me Energy', brand: 'e.l.f.', price: '$200', category: 'labiales', image: '/images/img-06.jpg', badge: '2 disponibles' },
+  { id: 6, name: 'e.l.f. Satin Lipstick Pink Me Energy', brand: 'e.l.f.', price: '$200', category: 'labiales', image: '/images/img-06.jpg' },
   { id: 8, name: 'e.l.f. Satin Lipstick Cherry On Top', brand: 'e.l.f.', price: '$200', category: 'labiales', image: '/images/img-08.jpg' },
   { id: 11, name: 'Maybelline Skinnydip', brand: 'Maybelline', price: '$10.00', category: 'labiales', image: '/images/img-11.jpg' },
   { id: 10, name: 'Maybelline Superstay Teddy Tint Petalcore', brand: 'Maybelline', price: '$11.00', category: 'labiales', image: '/images/img-10.jpg' },
@@ -40,7 +40,7 @@ export const PRODUCTS = [
   { id: 18, name: 'e.l.f. Máscara de Pestañas', brand: 'e.l.f.', price: '$200', category: 'skincare', image: '/images/img-18.jpg' },
   { id: 19, name: 'e.l.f. Squeeze Me Lip Balm Lemon', brand: 'e.l.f.', price: '$150', category: 'labiales', image: '/images/img-19.jpg' },
   { id: 20, name: 'e.l.f. Glow Reviver Lip Balm Java Chip', brand: 'e.l.f.', price: '$8.00', category: 'skincare', image: '/images/img-20.jpg' },
-  { id: 22, name: 'e.l.f. Halo Glow Skin Tint 6 Light Cool', brand: 'e.l.f.', price: '$200', category: 'skincare', image: '/images/img-22.jpg', badge: '2 disponibles' },
+  { id: 22, name: 'e.l.f. Halo Glow Skin Tint 6 Light Cool', brand: 'e.l.f.', price: '$200', category: 'skincare', image: '/images/img-22.jpg' },
   { id: 23, name: 'Maybelline Cloudtopia Mousse Moonlit Rose 7', brand: 'Maybelline', price: '$180', category: 'skincare', image: '/images/img-23.jpg' },
   { id: 25, name: 'e.l.f. Squeeze Me Lip Balm Violet', brand: 'e.l.f.', price: '$150', category: 'labiales', image: '/images/img-25.jpg' },
 
