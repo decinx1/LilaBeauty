@@ -53,8 +53,8 @@ export const PRODUCTS = [
 
 // Hero showcase images (diverse, visually striking)
 export const HERO_IMAGES = [
-  '/images/img-01.webp',
-  '/images/img-05.webp',
-  '/images/img-11.webp',
+  '/images/img-21.webp',
+  '/images/img-04.webp',
+  '/images/img-27.webp',
   '/images/img-23.webp',
 ];
