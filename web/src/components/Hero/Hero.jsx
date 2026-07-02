@@ -36,7 +36,7 @@ export default function Hero() {
           {/* Logo Icon Box */}
           <motion.div variants={item} className={styles.logoBoxWrapper}>
             <div className={styles.logoBox}>
-              <img src="/images/logo.jpg" alt="Lila Beauty" />
+              <img src="/images/logo.webp" alt="Lila Beauty" />
             </div>
           </motion.div>
 

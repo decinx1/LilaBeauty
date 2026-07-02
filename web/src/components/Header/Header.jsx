@@ -49,7 +49,7 @@ export default function Header() {
           aria-label="Lila Beauty Inicio"
           onClick={(e) => handleNavClick(e, '#inicio')}
         >
-          <img src="/images/logo.jpg" alt="Lila Beauty" className={styles.logoImg} />
+          <img src="/images/logo.webp" alt="Lila Beauty" className={styles.logoImg} />
         </a>
 
         <nav className={styles.nav} aria-label="Navegación principal">
