@@ -18,7 +18,7 @@ export const PRODUCTS = [
   { id: 15, name: 'e.l.f. Skin Bronzing Drops Pure Gold', brand: 'e.l.f. Skin', price: '$200.00', category: 'skincare', image: '/images/img-15.webp' },
   { id: 4, name: 'NYX Fat Oil Lip Drip FOLD05', brand: 'NYX', price: '$185.00', category: 'lip-oil', image: '/images/img-04.webp' },
   { id: 36, name: 'NYX Fat Oil Lip', brand: 'NYX', price: '$185.00', category: 'lip-oil', image: '/images/img-36.webp' },
-  {id: 37, name: 'NYX Fat Oil Lip', brand: 'NYX', price: '$185.00', category: 'lip-oil', image: '/images/img-36.webp' },
+  {id: 37, name: 'NYX Fat Oil Lip', brand: 'NYX', price: '$185.00', category: 'lip-oil', image: '/images/img-37.webp' },
   {id: 45, name: 'Lip oil elf Pink quartz', brand: 'e.l.f', price: '$195.00', category: 'lip-oil', image: '/images/img-45.webp' },
   
   
