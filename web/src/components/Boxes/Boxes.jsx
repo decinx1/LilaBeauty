@@ -14,7 +14,7 @@ const BOXES = [
     badge: 'Para empezar',
     isPopular: false,
     emoji: '📦',
-    images: ['/images/img-01.webp', '/images/img-08.webp', '/images/img-07.webp', '/images/img-15.webp'],
+    images: ['/images/img-31.webp', '/images/img-26.webp', '/images/img-07.webp', '/images/img-15.webp'],
   },
   {
     id: '20-piezas',
@@ -26,7 +26,7 @@ const BOXES = [
     badge: 'Más pedido',
     isPopular: true,
     emoji: '✨',
-    images: ['/images/img-06.webp', '/images/img-24.webp', '/images/img-05.webp', '/images/img-31.webp', '/images/img-03.webp'],
+    images: ['/images/img-06.webp', '/images/img-40.webp', '/images/img-11.webp', '/images/img-31.webp', '/images/img-03.webp'],
   },
   {
     id: '50-piezas',
@@ -38,7 +38,7 @@ const BOXES = [
     badge: 'Mayor ahorro',
     isPopular: false,
     emoji: '👑',
-    images: ['/images/img-02.webp', '/images/img-22.webp', '/images/img-13.webp', '/images/img-10.webp', '/images/img-21.webp'],
+    images: ['/images/img-02.webp', '/images/img-33.webp', '/images/img-13.webp', '/images/img-10.webp', '/images/img-21.webp'],
   },
 ];
 
