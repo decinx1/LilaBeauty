@@ -1,0 +1,13 @@
+{
+  "name": "lilabeauty",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run watch --prefix web",
+    "build": "npm install --prefix web && npm run build --prefix web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decinx1/LilaBeauty.git"
+  }
+}

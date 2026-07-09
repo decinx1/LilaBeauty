@@ -1,5 +1,6 @@
 node_modules/
 .claude/
+web/dist/
 
 # Documentos internos de estrategia/negocio (no forman parte del codigo del sitio)
 CHEAT_SHEET.md
