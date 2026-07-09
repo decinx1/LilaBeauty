@@ -10,11 +10,10 @@ const BOXES = [
     desc: 'Mix surtido sin piezas repetidas. Combina variedad de labiales, lip oils y skincare de marcas originales, ideal para emprender o compartir.',
     price: '$130',
     unit: 'c/u',
-    totalPrice: '$1,300 total',
     badge: 'Para empezar',
     isPopular: false,
     emoji: '📦',
-    images: ['/images/img-01.webp', '/images/img-08.webp', '/images/img-07.webp', '/images/img-15.webp'],
+    images: ['/images/img-31.webp', '/images/img-26.webp', '/images/img-07.webp', '/images/img-15.webp'],
   },
   {
     id: '20-piezas',
@@ -22,11 +21,10 @@ const BOXES = [
     desc: 'Lote surtido multimarca con amplia variedad de tonos y fórmulas (sin repetir). Excelente margen de ganancia para surtir tu negocio.',
     price: '$120',
     unit: 'c/u',
-    totalPrice: '$2,400 total',
     badge: 'Más pedido',
     isPopular: true,
     emoji: '✨',
-    images: ['/images/img-06.webp', '/images/img-24.webp', '/images/img-05.webp', '/images/img-31.webp', '/images/img-03.webp'],
+    images: ['/images/img-06.webp', '/images/img-40.webp', '/images/img-11.webp', '/images/img-31.webp', '/images/img-03.webp'],
   },
   {
     id: '50-piezas',
@@ -34,11 +32,10 @@ const BOXES = [
     desc: 'El máximo ahorro para mayoristas. Surtido variado premium con la mejor selección de categorías y tonos sin saturar, más trato VIP.',
     price: '$110',
     unit: 'c/u',
-    totalPrice: 'Desde $5,500 total',
     badge: 'Mayor ahorro',
     isPopular: false,
     emoji: '👑',
-    images: ['/images/img-02.webp', '/images/img-22.webp', '/images/img-13.webp', '/images/img-10.webp', '/images/img-21.webp'],
+    images: ['/images/img-02.webp', '/images/img-33.webp', '/images/img-13.webp', '/images/img-10.webp', '/images/img-21.webp'],
   },
 ];
 
